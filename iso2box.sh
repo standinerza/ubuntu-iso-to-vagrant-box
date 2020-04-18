@@ -58,7 +58,7 @@ for U in /root  /home/vagrant; do
   wget --no-check-certificate https://raw.githubusercontent.com/mitchellh/vagrant/master/keys/vagrant     -O $U/.ssh/id_rsa;
   wget --no-check-certificate https://raw.githubusercontent.com/mitchellh/vagrant/master/keys/vagrant.pub -O $U/.ssh/id_rsa.pub;
   chmod 600 $U/.ssh/id_*;
-  cat  $U/.ssh/id_rsa.pub >| $U/root/.ssh/authorized_keys;
+  cat  $U/.ssh/id_rsa.pub >| $U/.ssh/authorized_keys;
 done
 
 chown -R vagrant.vagrant /home/vagrant/.ssh;
