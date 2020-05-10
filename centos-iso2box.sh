@@ -3,6 +3,7 @@
 
 yum -y update
 yum -y groupinstall "Development Tools" 
+yum -y install wget bzip2 tar gcc 
 
 #Import key Vagrant from Github
 
@@ -21,10 +22,12 @@ chown -R vagrant.vagrant /home/vagrant/.ssh
 #Let Vagrant user using sudo without password 
 echo 'vagrant ALL=(ALL) NOPASSWD: ALL' >>/etc/sudoers
 
+reboot now
+
 #Reboot the server
 
 #Install kernel-header and wget 
-yum -y install vim kernel-devel wget bzip2 tar gcc 
+yum -y install vim kernel-devel 
 
 #Mount VirtualBox Guest and Install it 
 mount /dev/cdrom /mnt
