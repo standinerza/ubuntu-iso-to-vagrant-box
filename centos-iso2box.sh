@@ -31,7 +31,7 @@ yum -y install vim kernel-devel
 
 #Mount VirtualBox Guest and Install it 
 mount /dev/cdrom /mnt
-sh /mnt/ VBoxLinuxAdditions.run
+sh /mnt/VBoxLinuxAdditions.run
 
 #Clean up 
 yum -y install yum-utils 
